@@ -110,36 +110,40 @@ JWT_SECRET
 
 NODE_ENV=production
 
- Sprint 1 Scope Completion
+Sprint Development Summary
+Sprint 1 – Core System Setup (MVP)
+• Repository initialized with professional structure
+• Feature branch development and commit workflow
+• Authentication system implemented (JWT + bcrypt)
+• Sequelize database integration
+• Environment variable configuration
+• Initial automated tests created using Jest and Supertest
 
- Repository initialized with professional structure
- Feature branch development and commits
- Authentication system implemented
- Sequelize database integration
- Environment variable configuration
- Basic automated tests
- Jira Sprint 1 user stories completed
- Deployment attempt completed
+Sprint 2 – Feature Expansion
+• Expanded API routes for case management
+• Role-based access control improvements
+• Backend deployment configuration on Render
+• Additional endpoint validation and testing
 
- Known Limitations (Sprint 1)
+Sprint 3 – Production Readiness
+• Final deployment verification on Render
+• Documentation updates including architecture and design patterns
+• CI/CD pipeline configuration using GitHub Actions
+• Jira sprint completion with full user story tracking
+• Final project stabilization and portfolio documentation
 
-Case CRUD endpoints are scaffolded but not fully expanded
+Known Limitations
 
-Role-based authorization will be enhanced in Sprint 2
+• Case CRUD endpoints are scaffolded but not fully expanded
+• Role-based authorization will continue to evolve for additional permission layers
+• Additional integration testing could be implemented for larger datasets
 
-Additional integration testing planned for future sprints
+Future Enhancements
 
- Next Sprint Goals
-
-Sprint 2 will include:
-
-Full Case CRUD operations
-
-Role-based route protection expansion
-
-Expanded test coverage
-
-Improved frontend integration 
+• Full Case CRUD operations expansion
+• Additional role-based route protection
+• Expanded automated test coverage
+• Improved frontend integration for complete full-stack workflow
 
 CI/CD Pipeline
 
