@@ -65,15 +65,13 @@ Jest
 
 Supertest
 
+Test coverage authentication workflow verification using Jest and Supertest. Tests currently validate successful user registration, successful login, and invalid login handling. These tests help confirm that critical API authentication functionality behaves correctly under both success and failure scenarios.
+
 Test coverage includes:
-
-User registration endpoint
-
-User login endpoint
-
-JWT generation validation
-
-Tests pass locally before deployment.
+-User registration endpoint
+-User login endpoint
+-JWT generation validation
+-Tests pass locally before deployment.
 
 Run tests locally:
 

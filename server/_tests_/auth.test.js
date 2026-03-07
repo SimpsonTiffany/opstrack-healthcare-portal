@@ -43,3 +43,14 @@ describe("Auth Routes", () => {
         expect(res.body.token).toBeDefined();
     });
 });
+test("should reject login with invalid credentials", async () => {
+    const res = await request(app)
+        .post("/api/auth/login")
+        .send({
+            username: "wronguser",
+            password: "wrongpass"
+        });
+
+    expect(res.statusCode).toBe(401);
+    expect(res.body.message).toBeDefined();
+});
