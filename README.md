@@ -1,4 +1,4 @@
-OpsTrack Healthcare Portal is a Sprint 1 Minimum Viable Product (MVP) backend application designed to support healthcare case tracking. This phase establishes the foundational backend architecture, authentication system, database integration, and basic automated testing.
+OpsTrack Healthcare Portal is a backend healthcare case-tracking API developed through a three-sprint Agile SDLC process. The final version demonstrates authentication, database integration, automated testing, and deployment using professional software development practices.
 
 Sprint 1 focuses on core system setup and professional development workflow rather than advanced feature completeness.
 
@@ -6,7 +6,7 @@ Sprint 1 focuses on core system setup and professional development workflow rath
 
 GitHub Repository: https://github.com/SimpsonTiffany/opstrack-healthcare-portal.git
 
-Deployed API (Render): https://dashboard.render.com/web/srv-d6ie19v5r7bs73fffc20
+Deployed API (Render): https://opstrack-healthcare-portal-api.onrender.com
 
 Jira Sprint 1 Board:
 https://simpsontiffany325.atlassian.net/jira/software/projects/OTHP/boards/1/backlog
@@ -140,3 +140,14 @@ Role-based route protection expansion
 Expanded test coverage
 
 Improved frontend integration 
+
+CI/CD Pipeline
+
+Continuous Integration is configured using GitHub Actions.
+
+The pipeline automatically runs the Jest test suite whenever code is pushed or a pull request is opened. This ensures that new changes do not break existing functionality before deployment.
+
+Benefits of this workflow:
+• Automated verification of API endpoints
+• Faster debugging during development
+• More reliable production deployments
