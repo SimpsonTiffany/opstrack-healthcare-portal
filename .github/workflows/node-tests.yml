@@ -2,9 +2,9 @@ name: Node Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -28,6 +28,6 @@ jobs:
 
       - name: Run tests
         env:
-          JWT_SECRET: testsecret
-          DATABASE_URL: sqlite::memory:
+          JWT_SECRET: "testsecret"
+          DATABASE_URL: "sqlite::memory:"
         run: npm test
