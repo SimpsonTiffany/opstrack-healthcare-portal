@@ -4,11 +4,9 @@ Sprint 1 focuses on core system setup and professional development workflow rath
 
  Project Links
 
-GitHub Repository: https://github.com/SimpsonTiffany/opstrack-healthcare-portal.git
-
-Deployed API (Render): https://opstrack-healthcare-portal-api.onrender.com
-
-Jira Sprint 1 Board:
+-GitHub Repository: https://github.com/SimpsonTiffany/opstrack-healthcare-portal.git
+-Deployed API (Render): https://opstrack-healthcare-portal-api.onrender.com
+-Jira Sprint 1 Board:
 https://simpsontiffany325.atlassian.net/jira/software/projects/OTHP/boards/1/backlog
 
  Tech Stack
@@ -43,6 +41,15 @@ Configuration Layer – Environment-based configuration
 
 Separation of concerns was implemented to support scalability and future sprint expansion.
 
+ Design Patterns
+
+ Layered Architecture Pattern
+
+The application follows a layered architecture separating routes, middleware, models, and configuration. This improves maintainability and scalability by isolating responsibilities between different parts of the system. Each layer focuses on a specific role in the application, allowing the system to be extended more easily as new features are added.
+
+ Middleware Pattern
+Express middleware is used to implement authentication and role-based authorization. Middleware functions intercept incoming requests before they reach route handlers, allowing reusable logic such as authentication checks, token validation, and role enforcement to be applied across multiple endpoints without duplicating code.
+
  Authentication Features
 
 Sprint 1 includes:
@@ -65,7 +72,7 @@ Jest
 
 Supertest
 
-Test coverage authentication workflow verification using Jest and Supertest. Tests currently validate successful user registration, successful login, and invalid login handling. These tests help confirm that critical API authentication functionality behaves correctly under both success and failure scenarios.
+Test coverage incluedes authentication workflow verification using Jest and Supertest. Tests currently validate successful user registration, successful login, and invalid login handling. These tests help confirm that critical API authentication functionality behaves correctly under both success and failure scenarios.
 
 Test coverage includes:
 -User registration endpoint
@@ -79,7 +86,7 @@ cd server
 npm test
  Local Setup Instructions
 1. Clone Repository
-git clone YOUR_GITHUB_REPO_LINK_HERE
+git clone https://github.com/SimpsonTiffany/opstrack-healthcare-portal.git
 cd opstrack-healthcare-portal/server
 2. Install Dependencies
 npm install
