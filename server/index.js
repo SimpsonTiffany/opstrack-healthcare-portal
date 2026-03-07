@@ -33,3 +33,6 @@ sequelize.sync().then(() => {
         console.log(`Server listening on port ${PORT}`);
     });
 });
+app.get("/", (req, res) => {
+    res.send("Opstrack Healthcare Portal API is running.");
+});
