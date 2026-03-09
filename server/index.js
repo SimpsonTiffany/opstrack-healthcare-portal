@@ -10,27 +10,13 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
 
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
 
 const caseRoutes = require("./routes/cases");
 app.use("/api/cases", caseRoutes);
-
-
-
-// ROOT ROUTE (this is what shows when someone visits your Render link)
-app.get("/", (req, res) => {
-    res.json({
-        message: "OpsTrack Healthcare Portal API is running",
-        endpoints: {
-            auth: "/api/auth",
-            cases: "/api/cases"
-        }
-    });
-});
-
-
 
 const PORT = process.env.PORT || 3000;
 
