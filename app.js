@@ -1,8 +1,7 @@
 app.get("/", (req, res) => {
     res.send(`
-    <h1>Opstrack Healthcare Portal</h1>
-    <p>Welcome to the Opstrack Healthcare Portal API.</p>
-    <p>This Sprint 1 MVP demonstrates the backend architecture and API endpoints for managing healthcare cases.</p>
+    <h1>OpsTrack Healthcare Portal</h1>
+    <p>Sprint 1 MVP Backend API</p>
 
     <h3>Available Endpoints</h3>
     <ul>
