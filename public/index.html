@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpsTrack Healthcare Portal</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            padding: 50px;
-            background: #f4f4f4;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-            display: inline-block;
-        }
-
-        a {
-            display: block;
-            margin-top: 10px;
-            color: #0077cc;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-    <div class="card">
+    <header>
         <h1>OpsTrack Healthcare Portal</h1>
+        <nav>
+            <button id="homeBtn">Home</button>
+            <button id="showRegisterBtn">Register</button>
+            <button id="showLoginBtn">Login</button>
+            <button id="loadCasesBtn">Load Cases</button>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
 
-        <p>Sprint 1 MVP Backend API</p>
+    <main>
+        <section id="homeSection" class="card">
+            <h2>Welcome</h2>
+            <p>This is the Sprint 1 MVP for OpsTrack Healthcare Portal.</p>
+            <p>Use the buttons above to register, log in, and load cases.</p>
+        </section>
 
-        <h3>Available Endpoints</h3>
+        <section id="registerSection" class="card hidden">
+            <h2>Register</h2>
+            <input type="text" id="registerUsername" placeholder="Username" />
+            <input type="email" id="registerEmail" placeholder="Email" />
+            <input type="password" id="registerPassword" placeholder="Password" />
+            <button id="registerBtn">Submit Registration</button>
+        </section>
 
-        <a href="/api/auth">Auth Endpoint</a>
-        <a href="/api/cases">Cases Endpoint</a>
+        <section id="loginSection" class="card hidden">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+            <button id="loginBtn">Submit Login</button>
+        </section>
 
-        <p>Status: API Running</p>
-    </div>
+        <section id="casesSection" class="card hidden">
+            <h2>Cases</h2>
+            <div id="casesOutput">No cases loaded yet.</div>
+        </section>
 
+        <section class="card">
+            <h2>Status</h2>
+            <div id="statusOutput">App loaded.</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

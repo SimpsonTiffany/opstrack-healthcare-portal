@@ -13,21 +13,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
 
-// Home page
-app.get("/", (req, res) => {
-    res.send(`
-    <h1>OpsTrack Healthcare Portal</h1>
-    <p>Backend API is running.</p>
-    <p>Available endpoints:</p>
-    <ul>
-      <li>/api/auth</li>
-      <li>/api/cases</li>
-    </ul>
-  `);
-});
-
-// API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/cases", caseRoutes);
 
@@ -35,8 +22,9 @@ const PORT = process.env.PORT || 3000;
 
 sequelize.sync().then(() => {
     console.log("Database synced");
-
     app.listen(PORT, () => {
-        console.log("Server running on port " + PORT);
+        console.log(`Server running on port ${PORT}`);
     });
+}).catch((err) => {
+    console.error("Database error:", err);
 });
