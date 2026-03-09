@@ -45,3 +45,38 @@ button {
 button:hover {
     background-color: #255d90;
 }
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+#casesOutput {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+#statusOutput {
+    font-weight: bold;
+}
